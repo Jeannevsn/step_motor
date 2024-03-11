@@ -19,6 +19,8 @@ void moveMotor(uint16_t nombrePas, uint8_t vitesse, uint8_t direction);
 void controlerAlimentation(uint8_t etat);
 void position_FDChigh(int FDChigh);
 void MoveMotorByFDChigh(int FDChigh);
+void position_FDClow(int FDChigh);
+void MoveMotorByFDClow(int FDChigh);
 DigitalOut STBY(D7);
 DigitalOut STEP(D6);
 DigitalOut DIr(D3);
@@ -78,12 +80,12 @@ int main()
                 break;
             }
         }
-        /*msg.id = 200;
+        msg.id = 200;
         msg.len = 0;
         msg.format = CANStandard;
         msg.type = CANData;
         can.write(msg);
-        ThisThread::sleep_for(1s);*/
+        ThisThread::sleep_for(1s);
     }
     return 0;
 }
